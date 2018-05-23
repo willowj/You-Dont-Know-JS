@@ -8,14 +8,14 @@
 
 -----
 
-[目录](toc.md)
+[目录](/types_vs_grammar/toc.md)
 
-* [序](foreword.md)（[David Walsh](http://davidwalsh.name)）
+* [序](/types_vs_grammar/foreword.md)（[David Walsh](http://davidwalsh.name)）
 * [前言](../preface.md)
-* [第一章：类型](ch1.md)
-* [第二章：值](ch2.md)
-* [第三章：原生类型](ch3.md)
-* [第四章：强制转换](ch4.md)
-* [第五章：文法](ch5.md)
-* [附录A：与环境混合的 JavaScript](apA.md)
-* [附录B: 鸣谢](apB.md)
+* [第一章：类型](/types_vs_grammar/ch1.md)
+* [第二章：值](/types_vs_grammar/ch2.md)
+* [第三章：原生类型](/types_vs_grammar/ch3.md)
+* [第四章：强制转换](/types_vs_grammar/ch4.md)
+* [第五章：文法](/types_vs_grammar/ch5.md)
+* [附录A：与环境混合的 JavaScript](/types_vs_grammar/apA.md)
+* [附录B: 鸣谢](/types_vs_grammar/apB.md)

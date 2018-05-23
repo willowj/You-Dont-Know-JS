@@ -8,11 +8,11 @@
 
 -----
 
-[目录](toc.md)
+[目录](/up_vs_going/toc.md)
 
-* [序](foreword.md)（[Jenn Lukas](http://jennlukas.com)）
+* [序](/up_vs_going/foreword.md)（[Jenn Lukas](http://jennlukas.com)）
 * [前言](../preface.md)
-* [第一章：进入编程](ch1.md)
-* [第二章：进入JavaScript](ch2.md)
-* [第三章：进入YDKJS](ch3.md)
-* [附录A：鸣谢](apA.md)
+* [第一章：进入编程](/up_vs_going/ch1.md)
+* [第二章：进入JavaScript](/up_vs_going/ch2.md)
+* [第三章：进入YDKJS](/up_vs_going/ch3.md)
+* [附录A：鸣谢](/up_vs_going/apA.md)
