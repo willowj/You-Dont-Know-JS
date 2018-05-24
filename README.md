@@ -17,7 +17,7 @@
 
 * 在线阅读（免费！）：[“入门与进阶”](up_vs_going/README.md#you-dont-know-js-up--going)，已出版：[立即购买](http://shop.oreilly.com/product/0636920039303.do)印刷版，但是ebook格式是免费的！
 * 在线阅读（免费！）：[“作用域与闭包”](scope_vs_closures/README.md#you-dont-know-js-scope--closures)，已出版：[立即购买](http://shop.oreilly.com/product/0636920026327.do)
-* 在线阅读（免费！）：[“this与对象原型”](this_vs_object\%20prototypes/README.md#you-dont-know-js-this--object-prototypes)，已出版：[立即购买](http://shop.oreilly.com/product/0636920033738.do)
+* 在线阅读（免费！）：[“this与对象原型”](this_vs_object_prototypes/README.md#you-dont-know-js-this--object-prototypes)，已出版：[立即购买](http://shop.oreilly.com/product/0636920033738.do)
 * 在线阅读（免费！）：[“类型与文法”](types_vs_grammar/README.md#you-dont-know-js-types--grammar)，已出版：[立即购买](http://shop.oreilly.com/product/0636920033745.do)
 * 在线阅读（免费！）：[“异步与性能”](async_vs_performance/README.md#you-dont-know-js-async--performance)，已出版：[立即购买](http://shop.oreilly.com/product/0636920033752.do)
 * 在线阅读（免费！）：[“ES6与未来”](es6_vs_beyond/README.md#you-dont-know-js-es6--beyond)，已出版：[立即购买](http://shop.oreilly.com/product/0636920033769.do)

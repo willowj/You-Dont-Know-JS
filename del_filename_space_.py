@@ -23,10 +23,19 @@ def replace_text(file_path, parttern, new, re_sub=False):
     return re_sub and art
 
 
-for z in os.listdir(os.curdir):
-    if os.path.isdir(z) and not z.startswith('.'):
-        if ' & ' in z:
-            os.rename(z, z.replace(' & ', '_vs_'))
+def safe_name(path=None):
+    path = path or os.curdir
+
+    for i,z in enumerate(os.listdir(path)):
+        if os.path.isdir(z) and not z.startswith('.'):
+            os.rename(z, re.sub('\W', '_',z))
+            safe_name(path=os.listdir(path)[i])
+
+def change_readme(path=None):
+    path = path or os.curdir
+    for z in os.listdir(os.curdir):
+        if not os.path.isdir(z):
+            continue
         for y in os.listdir(z):
             if y.lower() == 'readme.md':
                 print z
@@ -36,5 +45,8 @@ for z in os.listdir(os.curdir):
                                    re_sub=True
                                    )
 
-    if z.lower() == 'readme.md':
-        replace_text(z, '\%20&\%20', '_vs_')
+        # if z.lower() == 'readme.md':
+        #     replace_text(z, '\%20&\%20', '_vs_')
+if __name__ == '__main__':
+     safe_name()
+     change_readme()
