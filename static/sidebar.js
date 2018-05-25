@@ -95,7 +95,7 @@ function github_filetree(getree, div_nav, filetypes) {
                     } else {
                         var ul = document.createElement('ul');
                         ul.setAttribute('folder', fles[i]);
-                        ul.innerHTML = '<a>' + fles[i] + '</a>';
+                        ul.innerHTML = '<a><i class="fa fa-fw fa-folder"></i> '  + fles[i] + '</a>';
                         this_node.appendChild(ul);
                         this_node = ul;
                     }
@@ -128,7 +128,7 @@ function fucos() {
 
 
 
-function addsidebar(getree, sidebar_css, home, filetypes) {
+function addsidebar(getree, sidebar_css, filetypes) {
     var div_sidebar = document.querySelector(sidebar_css)
     //div_nav.innerText = '';
     //create_contents(div_nav); // static/sidebar.js
@@ -147,13 +147,25 @@ function addsidebar(getree, sidebar_css, home, filetypes) {
     var li = document.createElement('li');
     d_ul.appendChild(li);
 
-    var a = document.createElement('a');
-    li.appendChild(a);
-    a.innerHTML = '<strong>home</strong>';
-    a.setAttribute('href', '/#');
-
+    /*home nav*/
+    var ul = document.createElement('ul');
+    var href = (window.location.href.split('#')[0] || '/') + '#';
+    ul.innerHTML = '<li><a href="' + href + '"><strong>home</strong></a></li>'
+    div_sidebar.prepend(ul, div_sidebar.firstElementChild)
 }
 
+
+function folder_opener(argument) {
+        /*folder */
+    for (var folder of document.querySelectorAll('ul[folder]')) {
+        for (var ele of folder.querySelectorAll('ul'))
+            ele.style.display = 'none';
+        folder.addEventListener('click', function() {
+            for (var ele of this.querySelectorAll('ul'))
+                ele.style.display = (ele.style.display == 'block') ? 'none' : 'block';
+        })
+    }
+}
 
 function make_filenav(opt) {
     var opt = opt || {};
@@ -163,9 +175,9 @@ function make_filenav(opt) {
     };
     var filetypes = opt.filetypes || ['md']; //
     var sidebar_css = opt.sidebar_css || 'div.sidebar-nav'; //
-    var home = opt.gtihub_repo.split('/')[1] || '#';
     var gtihub_repo_branch = opt.branch || 'master';
-    var recu = (!opt.recursive ? '' : "?recursive=1");
+    var recu = (opt.recursive == 0 ? '' : "?recursive=1");
+
     console.log(recu)
 
     if (opt.file_tree_url) {
@@ -197,7 +209,8 @@ function make_filenav(opt) {
     var x = document.location.href.split('?')[0];
     setInterval(function() {
         if (!document.querySelector('#addsidebarok')) {
-            addsidebar(getree, sidebar_css, home, filetypes);
+            addsidebar(getree, sidebar_css, filetypes);
+            folder_opener();
             console.log('sidebar 1');
         }
         if (document.location.href.split('?')[0] != x) {
@@ -205,5 +218,7 @@ function make_filenav(opt) {
             fucos();
         }
     }, 3000);
+
+
 
 }
